@@ -1,19 +1,19 @@
 export type NavigationItem = {
 	href: string;
-	label: string;
+	imgSrc: string;
 };
 
 export const NavigationItems: NavigationItem[] = [
 	{
 		href: 'home',
-		label: 'H'
+		imgSrc: 'cottage'
 	},
-	{
-		href: 'projects',
-		label: 'P'
-	},
+	// {
+	// 	href: 'projects',
+	// 	imgSrc: '/static/project.svg'
+	// },
 	{
 		href: 'skills',
-		label: 'S'
+		imgSrc: 'data_object'
 	}
 ];

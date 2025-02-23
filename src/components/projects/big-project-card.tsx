@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { Button } from '@mui/base';
+import { Button } from '@mui/material';
 
 import { Chip } from '@/components/projects/chip';
 

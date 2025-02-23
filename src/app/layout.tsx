@@ -7,6 +7,7 @@ import React from 'react';
 import Head from 'next/head';
 
 import { Providers } from './providers';
+import 'material-icons/iconfont/material-icons.css';
 
 const raleway = Raleway({ subsets: ['latin'] });
 

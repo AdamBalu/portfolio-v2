@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { Moon, Sun } from 'lucide-react';
-import { Button } from '@mui/base';
 
 export const ChangeThemeButton = () => {
 	const [mounted, setMounted] = useState(false);
@@ -18,23 +17,21 @@ export const ChangeThemeButton = () => {
 	}
 
 	return (
-		<div>
-			<Button
-				name="change theme"
-				className="px-4 py-2 font-semibold rounded-md"
-				onClick={() => {
-					setTheme(theme === 'light' ? 'dark' : 'light');
-				}}
-			>
-				{theme === 'light' ? (
-					<Moon
-						color="orange"
-						className="hover:fill-primary transition-transform hover:-rotate-[360deg] ease-in-out duration-1000"
-					/>
-				) : (
-					<Sun className="hover:fill-primary-dark transition-transform hover:-rotate-[180deg] ease-in-out duration-1000" />
-				)}
-			</Button>
-		</div>
+		<button
+			name="change theme"
+			className="px-4 py-2 font-semibold rounded-md"
+			onClick={() => {
+				setTheme(theme === 'light' ? 'dark' : 'light');
+			}}
+		>
+			{theme === 'light' ? (
+				<Moon
+					color="orange"
+					className="hover:fill-primary transition-transform hover:-rotate-[360deg] ease-in-out duration-1000"
+				/>
+			) : (
+				<Sun className="hover:fill-primary-dark transition-transform hover:-rotate-[180deg] ease-in-out duration-1000" />
+			)}
+		</button>
 	);
 };

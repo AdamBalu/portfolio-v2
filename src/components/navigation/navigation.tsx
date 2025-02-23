@@ -55,17 +55,19 @@ export const Navigation = () => {
 				<label htmlFor="navbar-checkbox" className="hidden">
 					no label for you
 				</label>
-				<span className="w-[17px] sm:w-[33px] absolute top-[50px]" />
-				<span className="w-[17px] sm:w-[33px] absolute top-[55px]" />
-				<span className="w-[17px] sm:w-[33px] absolute top-[60px]" />
-				<ul className="menuItem right-[-9px]">
+				<div className="bg-white dark:bg-secondary absolute top-[40px]">
+					<span className="w-[17px] sm:w-[33px] menuLine" />
+					<span className="w-[17px] sm:w-[33px] mt-1 menuLine" />
+					<span className="w-[17px] sm:w-[33px] mt-1 menuLine" />
+				</div>
+				<ul className="menuItem">
 					{NavigationItems.map((item, _) => (
-						<li key={item.label} className="mb-2">
+						<li key={item.imgSrc} className="mb-2">
 							<button
 								onClick={() => scrollToSection(item.href)}
-								className="uppercase rounded-md border border-primary dark:border-secondary w-14 h-14 text-slate-700 dark:text-slate-300 hover:text-primary hover:dark:text-primary-dark p-5"
+								className="uppercase rounded-md border border-primary dark:bg-dark dark:border-none flex justify-center items-center w-14 h-14 text-slate-700 dark:text-slate-300 hover:text-primary hover:dark:text-primary-dark"
 							>
-								{item.label}
+								<span className="material-icons-round">{item.imgSrc}</span>
 							</button>
 						</li>
 					))}

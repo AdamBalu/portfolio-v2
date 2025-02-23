@@ -40,13 +40,16 @@ header {
     /* and place it over the hamburger */
     -webkit-touch-callout: none;
 }
-.menuToggle span {
+.menuToggle .menuLine {
     position: relative;
     display: block;
     height: 4px;
     background: #89B6C3;
     border-radius: 3px;
     z-index: 1;
+}
+.menuToggle .material-icons-round {
+    font-size: 2rem;
 }
 .menuToggle input:checked ~ .menuItem {
     opacity: 1;
@@ -56,6 +59,7 @@ header {
 .menuItem {
     position: absolute;
     top: 90px;
+    right: -10px;
     opacity: 0;
     visibility: hidden;
     list-style-type: none;
